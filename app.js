@@ -1195,5 +1195,51 @@
 
 
 
-//// INTRODUCTION TO DOM
+// // INTRODUCTION TO DOM
+
+
+
+
+//// document.methods:
+////  getElementById - returns dom-object
+
+////  getElementsByTagName - returns list of dom-objects/ empty collection if nothing is found
+    // returned HTMLCollection is an array like object
+    // input[0] selecting by indices works
+    // .length works
+    // most Array methods won't
+    // Collection is iterable (loops):
+    // for (let input of inputs)
+    // you can spread objects in collection into an array:
+    // const arr = [...inputs]
+
+////  getElementsByClassName
+    // returns HTMLCollection
+
+//// search within other objects to narrow down search:
+    // const ul = document.getElementsByTagName('ul')[0]
+    // ul.getElementsByClassName('special')
+
+//// doesn't work with ID, because ID is supposed to be unique to a single object!!
+
+
+
+
+//// querySelector
+// A newer, all-in-one method to select a single element.
+// pass in a CSS selector:
+    // document.querySelector('#byid')
+    // document.querySelector('h1')
+    // document.querySelector('.byClass')
+
+    // returns a single object (at most), selects the first match!
+
+//// querySelectorAll
+    // returns a collection of all matching elements, but not a HTMLCollection, it's a NodeList
+    // NodeLists are also array-like objects
+    // difference to HTMLcollection is that we have the forEach function
+    
+
+
+
 
