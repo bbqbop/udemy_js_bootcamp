@@ -439,5 +439,119 @@
 
 
 
+ //// addEventListener(event, callback)
 
+    //  // .onclick or inline simply overwrites existing event listeners 
+
+    //  const btn = document.querySelector('button');
+    //  btn.addEventListener('click', function(){
+    //     alert('Clicked')
+    //  })
+
+    //  btn.addEventListener('click', function(){
+    //     console.log('2nd Thing')
+    //  })
+
+    //  //// addEventListener allows multiple 
+
+    //  btn.addEventListener('mouseover', function(){
+    //     btn.innerText = 'Stop touching me'
+    //  })
+
+    //  btn.addEventListener('mouseout', function(){
+    //     btn.innerText = 'Click Me';
+    //  })
+
+    //  //// select window for the global scope!
+    //  window.addEventListener('scroll', function() {
+    //     console.log('STOP SCROLLING!')
+    //  })
+
+
+
+
+
+//// DEMO THE IMPOSSIBLE BUTTON
+
+    // const btn = document.querySelector('button')
+    // btn.addEventListener('mouseover', function(){
+    //     //// USE window.innerWidth & Height for current window size
+    //     btn.style.left = `${Math.random() * window.innerWidth}px`;
+    //     btn.style.top = `${Math.random() * window.innerHeight}px`;
+    // })
+
+    // btn.addEventListener('click', function(){
+    //     btn.innerText = 'YOU GOT ME!';
+    //     document.body.style.backgroundColor = 'green'
+    // })
+
+
+
+
+
+
+//// EVENTS ON MULTIPLE ELEMENTS
+
+    //  const colors = [
+    //     'red',
+    //     'orange',
+    //     'yellow',
+    //     'green',
+    //     'blue',
+    //     'purple',
+    //     'indigo',
+    //     'violet'
+    //  ];
+
+    //  const h1 = document.querySelector('h1');
+    //  const printColor = function(){
+    //     console.log(this.style.backgroundColor) //// .this refers to the box that is being clicked on
+    //     h1.style.color = this.style.backgroundColor;
+    // }
+
+    // const container = document.querySelector('#boxes');
+
+    //  for (let color of colors) {
+    //     const box = document.createElement('div');
+    //     box.style.backgroundColor = color;
+    //     box.classList.add('box');
+    //     box.addEventListener('click', printColor);       
+    //     container.append(box);
+    //  }
+
+
+
+
+//// THE EVENT OBJECT
+
+// is always part of the eventlistener, we can capture it :
+    // addEventListener(function(event){})
+    // it contains information about the event (key, mouseclick etc)
+
+
+
+//// keydown, keyup & keypress
+    // keydown triggers at keydown
+    // keyup triggers key release
+    // keypress triggers when key actually writes into an input(letters, space etc)
+        // triggers at enter, not at delete, uppercase (shift + letter) are only 1 keypress
+
+
+
+//// EXERCISE SHOPPING LIST
+
+    // const addItemInput = document.querySelector('#addItem');
+    // const shoppingList = document.querySelector('#shoppingList')
+    // addItemInput.addEventListener('keypress', function(event){
+    //     if (event.key === 'Enter'){
+    //         // add a new item to the list
+    //         const newLi = document.createElement('li');
+    //         newLi.innerText = this.value;
+    //         shoppingList.append(newLi);
+    //         this.value = ''
+    //     }
+    // })
+
+
+    
 
